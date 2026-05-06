@@ -8,6 +8,7 @@ import {
   ScrollView,
   KeyboardAvoidingView,
   Platform,
+  TouchableOpacity,
 } from "react-native";
 
 import {
@@ -177,24 +178,35 @@ export default function HomeScreen({ navigation, route }) {
 
   return (
     <KeyboardAvoidingView
-      style={{ flex: 1 }}
+      style={{ flex: 1, backgroundColor: "#FFF0F6" }}
       behavior={Platform.OS === "ios" ? "padding" : undefined}
     >
       <ScrollView
-        style={{ flex: 1 }}
+        style={{ flex: 1, backgroundColor: "#FFF0F6" }}
         contentContainerStyle={{
           padding: 20,
           paddingBottom: 40,
         }}
         keyboardShouldPersistTaps="handled"
       >
-        <Text style={{ fontSize: 24, marginTop: 40, marginBottom: 20 }}>
+        <Text style={{ fontSize: 24, marginTop: 40, marginBottom: 20, color: "#C2185B", fontWeight: "700" }}>
           Bem-vinda, Luiza Macena!
         </Text>
 
-        <View style={{ marginBottom: 20 }}>
-          <Button title="Ler código de barras" onPress={handleOpenScanner} />
-        </View>
+        <TouchableOpacity
+          onPress={handleOpenScanner}
+          style={{
+            marginBottom: 20,
+            backgroundColor: "#E91E63",
+            paddingVertical: 12,
+            borderRadius: 6,
+            alignItems: "center",
+          }}
+        >
+          <Text style={{ color: "#FFF", fontWeight: "700", fontSize: 16 }}>
+            LER CÓDIGO DE BARRAS
+          </Text>
+        </TouchableOpacity>
 
         <TextInput
           placeholder="Nome do produto"
@@ -203,9 +215,11 @@ export default function HomeScreen({ navigation, route }) {
           autoCorrect={false}
           style={{
             borderWidth: 1,
+            borderColor: "#F48FB1",
             marginBottom: 10,
             padding: 10,
-            borderRadius: 5,
+            borderRadius: 10,
+            backgroundColor: "#FFF",
           }}
         />
 
@@ -216,9 +230,11 @@ export default function HomeScreen({ navigation, route }) {
           keyboardType="numeric"
           style={{
             borderWidth: 1,
+            borderColor: "#F48FB1",
             marginBottom: 10,
             padding: 10,
-            borderRadius: 5,
+            borderRadius: 10,
+            backgroundColor: "#FFF",
           }}
         />
 
@@ -229,51 +245,57 @@ export default function HomeScreen({ navigation, route }) {
           keyboardType="numeric"
           style={{
             borderWidth: 1,
+            borderColor: "#F48FB1",
             marginBottom: 20,
             padding: 10,
-            borderRadius: 5,
+            borderRadius: 10,
+            backgroundColor: "#FFF",
           }}
         />
 
         <Button
           title={editingProductId ? "Atualizar produto" : "Cadastrar produto"}
+          color="#E91E63"
           onPress={handleSaveProduct}
         />
 
         {editingProductId && (
           <View style={{ marginTop: 10 }}>
-            <Button title="Cancelar edição" onPress={handleCancelEdit} />
+            <Button title="Cancelar edição" color="#EC407A" onPress={handleCancelEdit} />
           </View>
         )}
 
-        <Text style={{ fontSize: 20, marginTop: 30, marginBottom: 10 }}>
+        <Text style={{ fontSize: 20, marginTop: 30, marginBottom: 10, color: "#C2185B", fontWeight: "600" }}>
           Produtos cadastrados
         </Text>
 
         {products.length === 0 ? (
-          <Text>Nenhum produto cadastrado.</Text>
+          <Text style={{ color: "#AD6386" }}>Nenhum produto cadastrado.</Text>
         ) : (
           products.map((item) => (
             <View
               key={item.id}
               style={{
                 borderWidth: 1,
+                borderColor: "#F8BBD0",
+                backgroundColor: "#FFF",
                 borderRadius: 5,
                 padding: 10,
                 marginBottom: 10,
               }}
             >
-              <Text>Nome: {item.name}</Text>
-              <Text>Preço: {item.price}</Text>
-              <Text>Código de barras: {item.barcode || "Não informado"}</Text>
+              <Text style={{ color: "#880E4F" }}>Nome: {item.name}</Text>
+              <Text style={{ color: "#880E4F" }}>Preço: {item.price}</Text>
+              <Text style={{ color: "#880E4F" }}>Código de barras: {item.barcode || "Não informado"}</Text>
 
               <View style={{ marginTop: 10 }}>
-                <Button title="Editar" onPress={() => handleEditProduct(item)} />
+                <Button title="Editar" color="#E91E63" onPress={() => handleEditProduct(item)} />
               </View>
 
               <View style={{ marginTop: 10 }}>
                 <Button
                   title="Excluir"
+                  color="#D81B60"
                   onPress={() => handleDeleteProduct(item.id)}
                 />
               </View>
@@ -282,7 +304,7 @@ export default function HomeScreen({ navigation, route }) {
         )}
 
         <View style={{ marginTop: 20, marginBottom: 20 }}>
-          <Button title="Sair" onPress={() => navigation.navigate("Login")} />
+          <Button title="Sair" color="#AD1457" onPress={() => navigation.navigate("Login")} />
         </View>
       </ScrollView>
     </KeyboardAvoidingView>

@@ -8,6 +8,7 @@ import {
   ScrollView,
   KeyboardAvoidingView,
   Platform,
+  TouchableOpacity,
 } from "react-native";
 
 import {
@@ -192,9 +193,20 @@ export default function HomeScreen({ navigation, route }) {
           Bem-vinda, Luiza Macena!
         </Text>
 
-        <View style={{ marginBottom: 20 }}>
-          <Button title="Ler código de barras" onPress={handleOpenScanner} />
-        </View>
+        <TouchableOpacity
+          onPress={handleOpenScanner}
+          style={{
+            marginBottom: 20,
+            backgroundColor: "#E91E63",
+            paddingVertical: 12,
+            borderRadius: 6,
+            alignItems: "center",
+          }}
+        >
+          <Text style={{ color: "#FFF", fontWeight: "700", fontSize: 16 }}>
+            LER CÓDIGO DE BARRAS
+          </Text>
+        </TouchableOpacity>
 
         <TextInput
           placeholder="Nome do produto"

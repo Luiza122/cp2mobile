@@ -1,46 +1,44 @@
-# 📱 FIAP — React Native (Expo)
+# Aplicativo de Cadastro de Produtos
 
-## Aula: Login + Navegação
+## Integrante
 
-Este projeto foi desenvolvido em aula com o objetivo de ensinar os conceitos fundamentais de **React Native com Expo**, focando em:
+- Luiza Macena Dantas — RM 556237
 
-* Criação de projeto
-* Organização de pastas
-* Construção de telas
-* Navegação entre telas
-* Componentização básica
+## Descrição do Projeto
 
----
+Este projeto consiste em um aplicativo mobile para cadastro de produtos. A aplicação permite informar o nome do produto, o preço e o código de barras, além de disponibilizar uma funcionalidade para leitura do código de barras.
 
-# 🎯 Objetivo
+O aplicativo possui uma tela inicial simples e objetiva, com mensagem de boas-vindas, formulário de cadastro, listagem dos produtos cadastrados e botão para sair.
 
-Construir uma aplicação simples contendo:
+## Funcionalidades
 
-* Tela de Login
-* Tela de Cadastro
-* Tela de Recuperação de Senha
-* Tela Home
-* Navegação entre telas (Stack)
+- Tela Home com mensagem de boas-vindas.
+- Cadastro de produto com nome, preço e código de barras.
+- Botão para leitura de código de barras.
+- Exibição dos produtos cadastrados.
+- Botão para sair do aplicativo.
+- Interface visual personalizada com paleta rosa e fundo claro.
 
-> ⚠️ Este projeto NÃO possui backend.
-> O foco é **layout + navegação**.
+## Tecnologias Utilizadas
 
----
+- React Native
+- Expo
+- Visual Studio Code
+- Android Emulator
 
-# 🧱 Tecnologias utilizadas
+## Como Executar o Projeto
 
-* React Native
-* Expo (SDK 54)
-* React Navigation
+1. Abrir o projeto no Visual Studio Code.
+2. Instalar as dependências:
 
----
 
-# 🚀 Como executar o projeto
+
+
 
 ## 1. Clonar o repositório
 
 ```bash
-https://github.com/LuizCamilo-Mobile/FIAP-Project-Mobile-Example.git
+https://github.com/Luiza122/cp2mobile.git
 ```
 
 ## 2. Acessar a pasta
@@ -63,7 +61,7 @@ npx expo start
 
 ---
 
-# 📦 Instalação manual (caso necessário)
+#  Instalação manual (caso necessário)
 
 Se precisar recriar o projeto do zero:
 
@@ -82,7 +80,7 @@ npx expo install react-native-safe-area-context
 
 ---
 
-# 📁 Estrutura do projeto
+# Estrutura do projeto
 
 ```text
 src/
@@ -98,7 +96,7 @@ src/
 
 ---
 
-# 🧭 Fluxo de navegação
+# Fluxo de navegação
 
 * Login → Home
 * Login → Cadastro
@@ -109,7 +107,7 @@ src/
 
 ---
 
-# 📸 Telas do app
+# Telas do app
 
 * Login
 * Cadastro
@@ -118,7 +116,7 @@ src/
 
 ---
 
-# 🧠 Conceitos abordados
+# Conceitos abordados
 
 * `View`, `Text`, `TextInput`, `Button`
 * `TouchableOpacity`
@@ -130,7 +128,7 @@ src/
 
 ---
 
-# 🛠️ Problemas comuns
+#  Problemas comuns
 
 ## Erro: "expected dynamic type 'boolean', but had type 'string'"
 
@@ -144,7 +142,7 @@ npm install react-native-screens@4.16.0 --save-exact
 
 ---
 
-# 🎯 Próximos passos
+#  Próximos passos
 
 * Melhorar layout (UI/UX)
 * Criar componentes reutilizáveis
@@ -154,13 +152,13 @@ npm install react-native-screens@4.16.0 --save-exact
 
 ---
 
-# 🗣️ Observação final
+#  Observação final
 
 Este projeto tem fins educacionais e foi construído passo a passo em aula para facilitar o aprendizado dos alunos.
 
 ---
 
-# 👩‍💻 Aluna
+#  Aluna
 
 Projeto adaptado por **Luiza Macena Dantas — RM556237**.
 

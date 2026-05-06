@@ -1,17 +1,38 @@
-# INTEGRANTE
-```
+# Aplicativo de Cadastro de Produtos
 
-Luiza Macena Dantas-RM556237
+## Integrante
 
-```
+- Luiza Macena Dantas — RM 556237
 
-# Documento de Melhorias Implementadas no Projeto Mobile
+## Descrição do Projeto
 
-## 1. Melhorias implementadas
+Este projeto consiste em um aplicativo mobile para cadastro de produtos. A aplicação permite informar o nome do produto, o preço e o código de barras, além de disponibilizar uma funcionalidade para leitura do código de barras.
 
-### Melhoria 1: Formatação do campo `price` no padrão brasileiro
+O aplicativo possui uma tela inicial simples e objetiva, com mensagem de boas-vindas, formulário de cadastro, listagem dos produtos cadastrados e botão para sair.
 
-O campo de preço foi ajustado para seguir o padrão brasileiro de moeda. Antes, o usuário podia digitar o valor livremente, sem padronização. Agora, ao digitar os números, o campo é formatado automaticamente como moeda brasileira, utilizando `R$`, vírgula como separador decimal e ponto como separador de milhar.
+## Funcionalidades
+
+- Tela Home com mensagem de boas-vindas.
+- Cadastro de produto com nome, preço e código de barras.
+- Botão para leitura de código de barras.
+- Exibição dos produtos cadastrados.
+- Botão para sair do aplicativo.
+- Interface visual personalizada com paleta rosa e fundo claro.
+
+## Tecnologias Utilizadas
+
+- React Native
+- Expo
+- Visual Studio Code
+- Android Emulator
+
+## Como Executar o Projeto
+
+1. Abrir o projeto no Visual Studio Code.
+2. Instalar as dependências:
+
+```bash
+npm install
 
 Exemplos de formato esperado:
 

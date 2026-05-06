@@ -34,6 +34,7 @@ export default function BarcodeScannerScreen({ navigation, route }) {
           justifyContent: "center",
           alignItems: "center",
           padding: 20,
+          backgroundColor: "#FFF0F6",
         }}
       >
         <Text>Carregando permissões da câmera...</Text>
@@ -49,13 +50,14 @@ export default function BarcodeScannerScreen({ navigation, route }) {
           justifyContent: "center",
           alignItems: "center",
           padding: 20,
+          backgroundColor: "#FFF0F6",
         }}
       >
-        <Text style={{ fontSize: 20, marginBottom: 20, textAlign: "center" }}>
+        <Text style={{ fontSize: 20, marginBottom: 20, textAlign: "center", color: "#C2185B" }}>
           Precisamos da permissão da câmera para ler o código de barras.
         </Text>
 
-        <Button title="Permitir acesso à câmera" onPress={requestPermission} />
+        <Button title="Permitir acesso à câmera" color="#E91E63" onPress={requestPermission} />
       </View>
     );
   }
@@ -70,17 +72,17 @@ export default function BarcodeScannerScreen({ navigation, route }) {
         />
       </View>
 
-      <View style={{ padding: 20 }}>
-        <Text style={{ fontSize: 20, marginBottom: 10 }}>
+      <View style={{ padding: 20, backgroundColor: "#FFF0F6" }}>
+        <Text style={{ fontSize: 20, marginBottom: 10, color: "#C2185B", fontWeight: "700" }}>
           Leitor de Código de Barras
         </Text>
 
-        <Text style={{ marginBottom: 20 }}>
+        <Text style={{ marginBottom: 20, color: "#880E4F" }}>
           Aponte a câmera para um código de barras.
         </Text>
 
         {scanned && (
-          <Button title="Ler novamente" onPress={() => setScanned(false)} />
+          <Button title="Ler novamente" color="#E91E63" onPress={() => setScanned(false)} />
         )}
       </View>
     </View>

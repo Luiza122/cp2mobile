@@ -19,6 +19,26 @@ O aplicativo possui uma tela inicial simples e objetiva, com mensagem de boas-vi
 - Botão para sair do aplicativo.
 - Interface visual personalizada com paleta rosa e fundo claro.
 
+
+## Melhorias Solicitadas (Documentação)
+
+As melhorias abaixo foram registradas neste README **sem alteração no código-fonte do projeto**, para evitar impacto em um app que já está funcionando:
+
+1. **Formatação do campo `price` no padrão brasileiro**  
+   Exibir e/ou validar preços no formato nacional (ex.: `R$ 1.234,56`).
+
+2. **Teclado dificultando a utilização em telas pequenas**  
+   Ajustar a experiência quando o teclado estiver aberto para não encobrir campos e botões.
+
+3. **Preservar dados do produto ao voltar do leitor de código de barras**  
+   Manter os valores já digitados no formulário ao retornar da tela de scanner.
+
+4. **Ajuste da rolagem do app em telas pequenas**  
+   Melhorar a rolagem para garantir acesso a todos os elementos da interface em dispositivos menores.
+
+> Observação: nesta atualização, foi feita **apenas documentação** (README), conforme solicitado.
+
+---
 ## Tecnologias Utilizadas
 
 - React Native

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, Text, Button, Alert } from "react-native";
+import { View, Text, TouchableOpacity, Alert } from "react-native";
 import { CameraView, useCameraPermissions } from "expo-camera";
 
 export default function BarcodeScannerScreen({ navigation, route }) {
@@ -28,42 +28,30 @@ export default function BarcodeScannerScreen({ navigation, route }) {
 
   if (!permission) {
     return (
-      <View
-        style={{
-          flex: 1,
-          justifyContent: "center",
-          alignItems: "center",
-          padding: 20,
-          backgroundColor: "#FFF0F6",
-        }}
-      >
-        <Text>Carregando permissões da câmera...</Text>
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center", padding: 20, backgroundColor: "#FFF0F6" }}>
+        <Text style={{ color: "#C2185B" }}>Carregando permissões da câmera...</Text>
       </View>
     );
   }
 
   if (!permission.granted) {
     return (
-      <View
-        style={{
-          flex: 1,
-          justifyContent: "center",
-          alignItems: "center",
-          padding: 20,
-          backgroundColor: "#FFF0F6",
-        }}
-      >
-        <Text style={{ fontSize: 20, marginBottom: 20, textAlign: "center", color: "#C2185B" }}>
-          Precisamos da permissão da câmera para ler o código de barras.
-        </Text>
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center", padding: 20, backgroundColor: "#FFF0F6" }}>
+        <View style={{ backgroundColor: "#FFF", borderRadius: 16, padding: 20, borderWidth: 1, borderColor: "#F8BBD0" }}>
+          <Text style={{ fontSize: 20, marginBottom: 20, textAlign: "center", color: "#C2185B" }}>
+            Precisamos da permissão da câmera para ler o código de barras.
+          </Text>
 
-        <Button title="Permitir acesso à câmera" color="#E91E63" onPress={requestPermission} />
+          <TouchableOpacity onPress={requestPermission} style={{ backgroundColor: "#E91E63", paddingVertical: 12, borderRadius: 10, alignItems: "center" }}>
+            <Text style={{ color: "#FFF", fontWeight: "700" }}>PERMITIR CÂMERA</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     );
   }
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, backgroundColor: "#FFF0F6" }}>
       <View style={{ flex: 1 }}>
         <CameraView
           style={{ flex: 1 }}
@@ -82,7 +70,9 @@ export default function BarcodeScannerScreen({ navigation, route }) {
         </Text>
 
         {scanned && (
-          <Button title="Ler novamente" color="#E91E63" onPress={() => setScanned(false)} />
+          <TouchableOpacity onPress={() => setScanned(false)} style={{ backgroundColor: "#E91E63", paddingVertical: 12, borderRadius: 10, alignItems: "center" }}>
+            <Text style={{ color: "#FFF", fontWeight: "700" }}>LER NOVAMENTE</Text>
+          </TouchableOpacity>
         )}
       </View>
     </View>
